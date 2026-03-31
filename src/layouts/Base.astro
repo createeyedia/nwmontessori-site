@@ -1,0 +1,25 @@
+---
+interface Props { title: string; }
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Northwest Montessori School — Seattle's first AMI-accredited Montessori school. Peaceful education since 1965. Three campuses serving children ages 2½–12." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet" />
+  <title>{title}</title>
+</head>
+<body>
+  <div class="color-strip"><div class="cs-blue"></div><div class="cs-orange"></div><div class="cs-green"></div></div>
+  <slot />
+  <div class="color-strip"><div class="cs-blue"></div><div class="cs-orange"></div><div class="cs-green"></div></div>
+</body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>
